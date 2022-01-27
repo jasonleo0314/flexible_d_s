@@ -48,3 +48,4 @@ import evidence_conflict_merge.evidence_conflict_merge.*
 
 不知道自己做的算不算公益，公安工作的智能化无论如何也算是为我们这个社会做贡献了吧。
 
+另：independent_event_evidence_merge 和 independent_event_non_zero_evidence_merge 两个接口效率还是可以的，正常需求下微秒级响应，随证据源数量线性增长。
