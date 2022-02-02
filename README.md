@@ -44,8 +44,6 @@ import evidence_conflict_merge.evidence_conflict_merge.*
 
 ## 四、算法问题
 
-本算法中，run_flexible_complete_conflict_algo 接口的计算过程完全依据论文写成，但明显算法时间和空间复杂度为均为 O(灾难级)，有待优化。目前，该接口的运算时间大致如下：设待融合的证据源数量为 n, 则运算事件为 10^n 毫秒。初步判断，一是代码中存在不合理的迭代需要改正，二是根据论文进行事件集合运算时，算法复杂度过高。以上两个问题有待精力充裕时再行调整。若是有走过路过的好心人提些个建议，当然是万分感谢了。倘若有大神肯伸出援手，更是感激不尽。
+本算法中，independent_event_evidence_merge 和 independent_event_non_zero_evidence_merge 两个接口效率还是可以的，正常需求下微秒级响应，随证据源数量线性增长。然而，虽然run_flexible_complete_conflict_algo 接口的计算过程完全依据论文写成，但明显算法时间和空间复杂度为均为 O(灾难级)，有待优化。目前，该接口的运算时间大致如下：设待融合的证据源数量为 n, 则运算事件为 10^n 毫秒。初步判断，一是代码中存在不合理的迭代需要改正，二是根据论文进行事件集合运算时，算法复杂度过高。以上两个问题有待精力充裕时再行调整。若是有走过路过的好心人提些个建议，当然是万分感谢了。倘若有大神肯伸出援手，更是感激不尽。
 
 不知道自己做的算不算公益，公安工作的智能化无论如何也算是为我们这个社会做贡献了吧。
-
-另：independent_event_evidence_merge 和 independent_event_non_zero_evidence_merge 两个接口效率还是可以的，正常需求下微秒级响应，随证据源数量线性增长。
